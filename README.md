@@ -55,3 +55,7 @@ This project is heavier on logic but employs some DOM manipulation to achieve it
 **Follow these steps for completing your project.**
 
 * [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+
+## Testing!
+
+* Im testing my repo!
