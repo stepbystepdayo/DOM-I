@@ -90,3 +90,44 @@ firstContentTextAbout.textContent = siteContent["main-content"]["about-content"]
 const middleImg = document.querySelector('.middle-img')
 console.log(middleImg)
 middleImg.src =siteContent["main-content"]["middle-img-src"]
+
+const bottomContent = document.querySelector('.bottom-content')
+// console.log(serviceContent)
+
+const serviceContentH4 = bottomContent.querySelector('.text-content h4')
+serviceContentH4.textContent = siteContent["main-content"]["services-h4"]
+const serviceContentH4Text = bottomContent.querySelector('.text-content p')
+serviceContentH4Text.textContent = siteContent["main-content"]["services-content"]
+
+const productContentH4 = bottomContent.querySelectorAll('.text-content h4')[1]
+productContentH4.textContent = siteContent["main-content"]["product-h4"]
+const productContentH4Text = bottomContent.querySelectorAll('.text-content p')[1]
+productContentH4Text.textContent = siteContent["main-content"]["product-content"]
+
+const visionContentH4 = bottomContent.querySelectorAll('.text-content h4')[2]
+visionContentH4.textContent = siteContent["main-content"]["vision-h4"]
+const visionContentH4Text = bottomContent.querySelectorAll('.text-content p')[2]
+visionContentH4Text.textContent = siteContent["main-content"]["vision-content"]
+
+const contactContent = document.querySelector('.contact')
+
+const contactH4 = contactContent.querySelector('h4')
+console.log(contactH4)
+contactH4.textContent = siteContent.contact["contact-h4"]
+
+const contactText1 = contactContent.querySelector('p')
+contactText1.textContent = siteContent.contact.address
+console.log(contactText1)
+
+const contactNumber = contactContent.querySelectorAll('p')[1]
+contactNumber.textContent = siteContent.contact.phone
+console.log(contactNumber)
+
+const contactEmail = contactContent.querySelectorAll('p')[2]
+contactEmail.textContent = siteContent.contact.email
+console.log(contactEmail)
+
+const footer = document.querySelector('footer')
+
+const footerCopyRight = footer.querySelector('p')
+footerCopyRight.textContent = siteContent.footer.copyright
