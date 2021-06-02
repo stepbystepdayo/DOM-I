@@ -40,3 +40,120 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navEl = document.querySelectorAll('a')
+
+navEl.forEach((item, index)=> {
+  // console.log(item)
+  item.textContent = siteContent["nav"][`nav-item-${index}`];
+ 
+})
+
+
+
+
+const ctaText = document.querySelector('.cta-text h1')
+ctaText.textContent = siteContent["cta"]["h1"]
+
+//next, we need to make button
+
+
+const ctaButton = document.querySelector('.cta-text button')
+// console.log(ctaButton)
+ctaButton.textContent = siteContent.cta.button
+
+//next,we need to put big picture next to CTA
+
+const ctaPicture = document.querySelector("#cta-img")
+// console.log(ctaPicture)
+ctaPicture.src =siteContent.cta["img-src"]
+
+//next, we need to make main content
+
+const topContent = document.querySelector('.top-content')
+// console.log(topContent)
+const firstContentH4 = topContent.querySelector('.text-content h4')
+// console.log(firstContentH4)
+
+firstContentH4.textContent = siteContent["main-content"]["features-h4"]
+
+const firstContentText = topContent.querySelector('.text-content p')
+// console.log(firstContentText)
+firstContentText.textContent = siteContent["main-content"]["features-content"]
+
+
+const firstContentH4About = topContent.querySelectorAll('.text-content h4')[1]
+// console.log(firstContentH4About)
+
+firstContentH4About.textContent = siteContent["main-content"]["about-h4"]
+
+const firstContentTextAbout = topContent.querySelectorAll('.text-content p')[1]
+// console.log(firstContentText)
+firstContentTextAbout.textContent = siteContent["main-content"]["about-content"]
+
+const middleImg = document.querySelector('.middle-img')
+console.log(middleImg)
+middleImg.src =siteContent["main-content"]["middle-img-src"]
+
+const bottomContent = document.querySelector('.bottom-content')
+// console.log(serviceContent)
+
+const serviceContentH4 = bottomContent.querySelector('.text-content h4')
+serviceContentH4.textContent = siteContent["main-content"]["services-h4"]
+const serviceContentH4Text = bottomContent.querySelector('.text-content p')
+serviceContentH4Text.textContent = siteContent["main-content"]["services-content"]
+
+const productContentH4 = bottomContent.querySelectorAll('.text-content h4')[1]
+productContentH4.textContent = siteContent["main-content"]["product-h4"]
+const productContentH4Text = bottomContent.querySelectorAll('.text-content p')[1]
+productContentH4Text.textContent = siteContent["main-content"]["product-content"]
+
+const visionContentH4 = bottomContent.querySelectorAll('.text-content h4')[2]
+visionContentH4.textContent = siteContent["main-content"]["vision-h4"]
+const visionContentH4Text = bottomContent.querySelectorAll('.text-content p')[2]
+visionContentH4Text.textContent = siteContent["main-content"]["vision-content"]
+
+const contactContent = document.querySelector('.contact')
+
+const contactH4 = contactContent.querySelector('h4')
+console.log(contactH4)
+contactH4.textContent = siteContent.contact["contact-h4"]
+
+const contactText1 = contactContent.querySelector('p')
+contactText1.textContent = siteContent.contact.address
+console.log(contactText1)
+
+const contactNumber = contactContent.querySelectorAll('p')[1]
+contactNumber.textContent = siteContent.contact.phone
+console.log(contactNumber)
+
+const contactEmail = contactContent.querySelectorAll('p')[2]
+contactEmail.textContent = siteContent.contact.email
+console.log(contactEmail)
+
+const footer = document.querySelector('footer')
+
+const footerCopyRight = footer.querySelector('p')
+footerCopyRight.textContent = siteContent.footer.copyright
+
+
+// make nav color green
+
+navEl.forEach((item)=> {
+  // console.log(item)
+  item.style.color='green'
+ 
+})
+
+const newLink = document.createElement('a')
+newLink.textContent = 'Blog'
+newLink.href = '#'
+document.querySelector('nav').appendChild(newLink)
+
+newLink.style.color='green'
+
+const beforeLink = document.createElement('a')
+beforeLink.textContent = 'YouTube'
+beforeLink.href = '#'
+document.querySelector('nav').prepend(beforeLink)
+beforeLink.style.color='green'
