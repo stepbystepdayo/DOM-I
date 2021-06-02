@@ -44,7 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const navEl = document.querySelectorAll('a')
 
 navEl.forEach((item, index)=> {
-  console.log(item)
+  // console.log(item)
   item.textContent = siteContent["nav"][`nav-item-${index}`];
 })
 
@@ -54,8 +54,39 @@ ctaText.textContent = siteContent["cta"]["h1"]
 //next, we need to make button
 
 
+const ctaButton = document.querySelector('.cta-text button')
+// console.log(ctaButton)
+ctaButton.textContent = siteContent.cta.button
+
+//next,we need to put big picture next to CTA
+
+const ctaPicture = document.querySelector("#cta-img")
+// console.log(ctaPicture)
+ctaPicture.src =siteContent.cta["img-src"]
+
+//next, we need to make main content
+
+const topContent = document.querySelector('.top-content')
+// console.log(topContent)
+const firstContentH4 = topContent.querySelector('.text-content h4')
+// console.log(firstContentH4)
+
+firstContentH4.textContent = siteContent["main-content"]["features-h4"]
+
+const firstContentText = topContent.querySelector('.text-content p')
+// console.log(firstContentText)
+firstContentText.textContent = siteContent["main-content"]["features-content"]
 
 
+const firstContentH4About = topContent.querySelectorAll('.text-content h4')[1]
+// console.log(firstContentH4About)
 
+firstContentH4About.textContent = siteContent["main-content"]["about-h4"]
 
+const firstContentTextAbout = topContent.querySelectorAll('.text-content p')[1]
+// console.log(firstContentText)
+firstContentTextAbout.textContent = siteContent["main-content"]["about-content"]
 
+const middleImg = document.querySelector('.middle-img')
+console.log(middleImg)
+middleImg.src =siteContent["main-content"]["middle-img-src"]
