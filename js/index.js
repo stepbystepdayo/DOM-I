@@ -46,7 +46,11 @@ const navEl = document.querySelectorAll('a')
 navEl.forEach((item, index)=> {
   // console.log(item)
   item.textContent = siteContent["nav"][`nav-item-${index}`];
+ 
 })
+
+
+
 
 const ctaText = document.querySelector('.cta-text h1')
 ctaText.textContent = siteContent["cta"]["h1"]
@@ -131,3 +135,25 @@ const footer = document.querySelector('footer')
 
 const footerCopyRight = footer.querySelector('p')
 footerCopyRight.textContent = siteContent.footer.copyright
+
+
+// make nav color green
+
+navEl.forEach((item)=> {
+  // console.log(item)
+  item.style.color='green'
+ 
+})
+
+const newLink = document.createElement('a')
+newLink.textContent = 'Blog'
+newLink.href = '#'
+document.querySelector('nav').appendChild(newLink)
+
+newLink.style.color='green'
+
+const beforeLink = document.createElement('a')
+beforeLink.textContent = 'YouTube'
+beforeLink.href = '#'
+document.querySelector('nav').prepend(beforeLink)
+beforeLink.style.color='green'
